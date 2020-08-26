@@ -8,15 +8,59 @@
 
 .top_nav{
     width: 100%;
-    height: 50px;
-    background-color:#A1E4FC;
+    height: 60px;
+    background-color:#ffffff;
     overflow: hidden;
 }
-.rightside_icon{ 
-    float: right ;
-}
-.rightside_icon a{
-    font-size: 25px;
+.mob_no{
+    
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #047985; 
     text-align: center;
-    padding-left: 20px;
+    
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 16% 99%);
+
+}
+
+.center_label li{
+    display: inline-block;
+    
+}
+.center_label li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    border-right: 2px solid grey;
+    margin: 10px;
+   
+}
+.right_icon{ 
+    float: right ;
+    
+}
+.right_icon li {
+    text-align: center;
+    display: inline-block;
+    
+}
+.right_icon li a{
+    font-size: 25px;
+    color: #111111;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 20px; 
+    border-right: 2px solid grey;
+}
+
+
+
+/* main navbar start  */
+.main_navbar{
+    width: 100%;
+    overflow: hidden;
+    background-color: #CA595E;
+}
+.main_navbar a{
 }
