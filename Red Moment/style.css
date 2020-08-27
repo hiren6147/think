@@ -245,12 +245,14 @@
 
 .img_container{
         display: grid;
-
+        overflow: hidden;
 }
 .banner1{
     grid-column: 1 / span 2;
   grid-row: 1;
+  
 }
+
 .banner2 , .banner3 {
     grid-column: 1;
     grid-row: 2;
