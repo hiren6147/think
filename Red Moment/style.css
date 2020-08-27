@@ -159,18 +159,21 @@
  .navbar li ul{
     display: none;
     position: absolute;
-    background-color: rgb(187, 187, 187);
     width: 100%;
     height: auto;
     left: 0; 
-    z-index: 10;   
-}
+    z-index: 10;  
 
+}
+.dropdown_content{
+    background-color: rgb(187, 187, 187);
+    padding-left:130px;
+}
 .dropdown_content li a{
     text-decoration: none;
     color: #111111;
     font-size: 18px;
-    margin-left:130px ;
+    padding-right: 60px;
 
 }
 .dropdown_content li .fa{
@@ -242,7 +245,7 @@
 
 .img_container{
         display: grid;
-        
+
 }
 .banner1{
     grid-column: 1 / span 2;
