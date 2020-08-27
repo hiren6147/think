@@ -10,12 +10,12 @@
     width: 100%;
     height: 60px;
     background-color:#ffffff;
-    overflow: hidden;
+    
     
 }
 .mob_no{
     
-    width: 35%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     background-color: #047985; 
@@ -33,6 +33,12 @@
     padding-right: 15px; 
     letter-spacing: 1px;
 }
+.center_label li+li a::before{
+    content: '|';
+    display: inline-block;
+    border-left: 2px solid white; 
+    padding-right: 10px;
+}
 .btn_right{
     float: right;
     background: #047985;
@@ -47,6 +53,7 @@
 }
 .right_icon{ 
     float: right ;
+  
     
 }
 .right_icon li {
@@ -54,19 +61,26 @@
     display: inline-block;
     
 }
+.right_icon li+li a::before{
+    content: '|';
+    display: inline-block;
+    border-left: 2px solid white; 
+    padding-right: 25px;
+}
 .right_icon li a{
     font-size: 25px;
     color: #111111;
     text-decoration: none;
     text-align: center;
-    margin-left: 40px; 
-    /* border-right: 2px solid grey; */
+    padding-left: 15px; 
+    display: inline-block;
+    
 }
+
 .right_icon li a .active{
     background: #047985;
-    height: 55px;
-    width: 80px;
     color:#ffffff;
+    
 }
 
 
@@ -77,7 +91,7 @@
     height: auto;
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: 11;
     top: 0px;
     left: 10px;
 }
@@ -87,32 +101,50 @@
     overflow: hidden;
     background-color: #CA595E;
 }
-.main_navbar ul {
+.main_navbar .navbar {
     float: left;
     padding-left: 145px;
     
   }
-   .main_navbar ul li {
+   .main_navbar .navbar li {
     display: inline-block;
     
    }
-   .main_navbar ul li a{
+   .navbar li a{
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
     text-align: center;
     border: none;
-    padding: 16px 21px;
+    padding: 13px 21px;
     display: inline-block;
    }
+   .navbar li:hover{
+    background-color : rgb(187, 187, 187);
+
+ } 
+ .main_navbar  li:hover ul {
+    display: block;
+}
+   /* .main_navbar ul li+li a::before{
+    content: '|';
+    display: inline-block;  
+    padding-right: 25px;
+   } */
    
-  .btn_blog{
-      margin-left: 0;
-      left: 0;
-  }
-  .btn_blog a{
+  .btn_blog{  
+    right:0%;
+    display: flex;
+    position: absolute;
     font-size: 20px;
-   
+    width: 8%;
+    height: 50px;
+    background: gray;
+    justify-content: center;
+    align-items: center;
+  }
+   .btn_blog a {
+    font-size: 20px;
     color: #ffffff;
     text-decoration: none;
     background: grey;
@@ -121,29 +153,91 @@
   .btn_blog:hover a{
       color:#ecc317;  
   }
-  .main_navbar ul li:hover{
-    background-color :green;
-
- } 
+  
 
 /* dropdown   */
-
-
-.main_navbar  li ul{
+ .navbar li ul{
     display: none;
     position: absolute;
-    background-color: grey;
+    background-color: rgb(187, 187, 187);
     width: 100%;
-    left: 0;
-    margin: 14px;
+    height: auto;
+    left: 0; 
+    z-index: 10;   
 }
-.main_navbar  li ul li{
-    width: 100%;
-    padding-top: 20px;  
+
+.dropdown_content li a{
+    text-decoration: none;
+    color: #111111;
+    font-size: 18px;
+    margin-left:130px ;
+
 }
-.main_navbar  li ul li a{
-    color: white;
+.dropdown_content li .fa{
+    color: #CA595E;
+    font-size: 40px;
 }
-.main_navbar  li:hover ul {
-    display: block;
+
+
+
+/*  ---- slideshow start ---- */
+
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 40%;
+	user-select: none;
+	background-color: #1c1c1c;
+
+ }
+	input {
+		display: none;
+	}
+
+	.slide_img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+    }
+		img {
+			width: inherit;
+			height: inherit;
+		}
+
+		.prev, .next {
+			width:5%;
+			height: 50px;
+			position: absolute;
+			top: 45%;
+			background-color:#08050533;;
+			z-index: 99;
+			transition: .40s;
+			cursor: pointer;
+			text-align: center;
+		}
+		.next {
+			right: 0;
+		}
+		.prev {
+			left: 0;
+		}
+
+        #i1:checked ~ #one,
+        #i2:checked ~ #two,
+        #i3:checked ~ #three {
+            z-index: 9;
+           animation: scroll 1s ease-in-out;
+                    }
+
+@keyframes scroll {
+	0% { opacity: .4;}
+	100% { opacity: 1;}
 }
+
+/*  -----   images start ---- */
+
+
