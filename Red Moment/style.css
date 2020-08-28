@@ -454,8 +454,11 @@ img {
 }
 .teamtext{
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   padding-top: 35px;
+  color: #aca6a6;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .team_section .btn_viewall{
   height:40px;
