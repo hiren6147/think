@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+   
 }
 
+.slick-next:before, .slick-prev:before{
+    color: black;
+}
 /*  topnav css start */
 
 .top_nav{
@@ -253,16 +258,129 @@
   
 }
 
-.banner2 , .banner3 {
+.banner2  {
     grid-column: 1;
     grid-row: 2;
+    position: relative;
+}
+.banner2 a img{
+    height: 315px;
+    width: 100%;
+   
+}
+ .banner3 a img {
+    height: 311px;
+    width: 100%;
+    z-index: 1;
+   
+}
+.banner4 a img{
+    height: 630px;
+    width: 100%;
 }
 .banner3{
     grid-column: 1;
     grid-row: 3;
+    position: relative;
 }
 .banner4 {
     grid-column: 2;
   grid-row: 2 / span 4;
+  position: relative;
 
+}
+
+.banner_text2{
+    position: absolute;
+    top: 25%;
+    left: 14%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 45px;
+    color: #CA595E;
+}
+.banner_text3{
+    position: absolute;
+    top: 25%;
+    left: 64%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 45px;
+    color: #ffffff;
+}
+.banner_text4{
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 45px;
+    color: #ffffff;
+}
+.btn_banner{
+    z-index: 1;
+    height: 45px;
+    width: 150px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #CA595E;
+    border:none;
+    cursor: pointer;
+    
+    
+}
+
+/* Cards Slider  start  */
+
+.card_section{
+    width: 100%;
+    height: auto;
+    
+}
+.cards_container {
+    display: flex;
+    width: 95%;
+    flex-wrap: wrap;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card_heading {
+    text-align: center;
+    font-size: 40px;   
+    font-weight: 300;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-decoration: none;
+    
+}
+.cards_container .card
+{
+    height: 80%;
+    width: 250px;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+   
+  
+}
+.card-img {
+    height: 100%;
+    width :100% ;
+}
+.card-text h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+.card-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
