@@ -1,0 +1,52 @@
+@mixin container($value) {
+  width: $value;
+  height: $value;
+}
+
+@mixin bg_color($value: grey) {
+  background-color: $value;
+}
+@mixin text() {
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  
+}
+@mixin bd-radius() {
+  border-radius: 8%;
+}
+//  interpolation mixin 
+
+@mixin padding($position, $unit) {
+    padding-#{$position} : $unit / 16 + rem;  
+}
+
+@mixin margin($position, $unit) {
+    margin-#{$position} : $unit / 16 + rem;  
+}
+
+
+#one {
+  @include container(20rem);
+  @include bg_color(#647EC9);
+  @include bd-radius();
+}
+
+#two {
+  @include container(20rem);
+  @include bg_color(#C9647D);
+
+  @include bd-radius();
+}
+
+#three {
+  @include container(20rem);
+  @include bg_color(#7DC964);
+
+  @include bd-radius();
+}
+.text {
+  @include text();
+  @include padding(top, 100);   // interpolation padding here  and value convert into rem 
+@include margin(top, 100); 
+}

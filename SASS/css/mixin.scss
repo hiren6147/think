@@ -1,42 +1,42 @@
 @mixin container($value) {
-    width: $value;
-    height: $value / 2;
-    top: 20%;
-    left: 20%;   
+  width: $value;
+  height: $value / 2;
+  top: 20%;
+  left: 20%;
 }
 
-@mixin bg_color($value) {
-    background-color: $value;  
+@mixin bg_color($value: grey) {
+  background-color: $value;
 }
 @mixin text() {
-    font-size: 25px;
-    color: black;
-    text-align: center;
-    
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  padding-top: 30px;
 }
 @mixin bd-radius() {
-    border-radius: 8%;
+  border-radius: 8%;
 }
 
-#one{
-    @include container(20rem);
-    @include bg_color(red);
-    @include text();
-    @include bd-radius();
-
+#one {
+  @include container(20rem);
+  @include bg_color(red);
+  @include bd-radius();
 }
 
-#two{
-    @include container(15rem);
-    @include bg_color(green);
-    @include text();
-    @include bd-radius();
+#two {
+  @include container(15rem);
+  @include bg_color(green);
+
+  @include bd-radius();
 }
 
-#three{
-    @include container(10rem);
-    @include bg_color(blue);
-    @include text();
-    @include bd-radius();
+#three {
+  @include container(10rem);
+  @include bg_color(blue);
 
+  @include bd-radius();
+}
+.text {
+  @include text();
 }

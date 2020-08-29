@@ -1,0 +1,28 @@
+#one {
+  width: 20rem;
+  height: 20rem;
+  background-color: #647EC9;
+  border-radius: 8%;
+}
+
+#two {
+  width: 20rem;
+  height: 20rem;
+  background-color: #C9647D;
+  border-radius: 8%;
+}
+
+#three {
+  width: 20rem;
+  height: 20rem;
+  background-color: #7DC964;
+  border-radius: 8%;
+}
+
+.text {
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  padding-top: 6.25rem;
+  margin-top: 6.25rem;
+}
