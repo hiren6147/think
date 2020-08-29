@@ -1,0 +1,20 @@
+$titlecolor: red;
+$bgcolor: grey;
+$textcolor: black;
+$div_width: 30rem;
+$div_height: auto;
+
+
+.container{
+    color: $bgcolor;
+    width: $div_width;
+    border: 1px solid $textcolor;
+}
+.title{
+    color: $titlecolor;
+    text-align: center;
+}
+.text{
+    color: $textcolor;
+    text-align: center;
+}

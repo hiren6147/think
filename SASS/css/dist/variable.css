@@ -1,0 +1,15 @@
+.container {
+  color: grey;
+  width: 30rem;
+  border: 1px solid black;
+}
+
+.title {
+  color: red;
+  text-align: center;
+}
+
+.text {
+  color: black;
+  text-align: center;
+}
