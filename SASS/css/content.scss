@@ -1,0 +1,33 @@
+body{
+    background-color: grey;
+}
+
+@mixin responsive($width) {
+    
+        @media screen and (max-width :$width){
+            @content;
+        }
+    }
+
+@include responsive(1300px)
+{
+    body{
+        background-color: red;
+    }
+}
+
+
+@include responsive(1000px)
+{
+    body{
+        background-color: green;
+    }
+}
+
+
+@include responsive(767px)
+{
+    body{
+        background-color: blue;
+    }
+}

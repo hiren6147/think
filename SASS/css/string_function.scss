@@ -1,0 +1,55 @@
+$width : 500px;
+$height : 400px;
+$bg-color : grey;
+$font-color : black;
+
+.container {
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    color: $font-color;
+    font-size: 35px;
+    text-align: center;
+    margin: 100px 50px;
+}
+
+
+//  string function scss here 
+
+
+ .container p {
+     font-family: quote(Arial);
+ }
+
+.container p {
+    font-family: unquote("Arial");
+}
+
+
+.container p {
+    font-family: to-upper-case("Arial");
+}
+
+.container p {
+    font-family: to-lower-case(Arial);
+}
+
+.container p {
+    font-family: str-index(Arial, i);
+}
+
+.container p {
+    font-family: str-insert(Arial,a,3);
+}
+
+.container p {
+    font-family: str-length(Arial);
+}
+
+.container p {
+    font-family: str-slice(Arial,2,4);
+}
+
+.container p {
+    font-family: unique-id();
+}
