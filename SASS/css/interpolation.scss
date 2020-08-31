@@ -18,11 +18,11 @@
 //  interpolation mixin 
 
 @mixin padding($position, $unit) {
-    padding-#{$position} : $unit / 16 + rem;  
+    padding-#{$position} : $unit + rem;  
 }
 
 @mixin margin($position, $unit) {
-    margin-#{$position} : $unit / 16 + rem;  
+    margin-#{$position} : $unit + rem;  
 }
 
 
@@ -47,6 +47,6 @@
 }
 .text {
   @include text();
-  @include padding(top, 100);   // interpolation padding here  and value convert into rem 
-@include margin(top, 100); 
+  @include padding(top, 6);   // interpolation padding here  and value convert into rem 
+@include margin(top, 6); 
 }

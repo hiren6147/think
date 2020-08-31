@@ -1,6 +1,6 @@
 @mixin container($value) {
   width: $value;
-  height: $value / 2;
+  height: $value;
   top: 20%;
   left: 20%;
 }

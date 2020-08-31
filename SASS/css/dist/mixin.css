@@ -1,6 +1,6 @@
 #one {
   width: 20rem;
-  height: 10rem;
+  height: 20rem;
   top: 20%;
   left: 20%;
   background-color: red;
@@ -9,7 +9,7 @@
 
 #two {
   width: 15rem;
-  height: 7.5rem;
+  height: 15rem;
   top: 20%;
   left: 20%;
   background-color: green;
@@ -18,7 +18,7 @@
 
 #three {
   width: 10rem;
-  height: 5rem;
+  height: 10rem;
   top: 20%;
   left: 20%;
   background-color: blue;
