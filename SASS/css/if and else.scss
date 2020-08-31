@@ -1,0 +1,14 @@
+@mixin bg-color($value) {
+    font-size: $value + px;
+    @if $value > 0 and $value <= 20{
+        background-color : red;
+    } @else if $value > 20 and $value <= 50 {
+        background-color : green;
+    }@else{
+        background-color: blue;
+    }
+}
+
+body {
+    @include bg-color(30);
+}
