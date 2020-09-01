@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+@import "varialble";
+@import "mixin";
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing : borderbox;
+}
+
+.nav_container{
+   li{
+       list-style-type: none;
+
+   }
+   
+    a {
+        text-decoration: none;
+        font-family: $monofont;
+    }
+}
+
+.mainNavbar{
+   @include flex();
+    background-color: $mainColor;
+    width: $nav_width;
+    height: $nav_height;
+
+@at-root
+    .left_menu{
+        display: flex;
+
+        li{
+            
+           
+            a{
+                @include flex();
+                color : #fff;
+                padding: 14px;
+
+                &:hover{
+                    background-color: #eee;
+                    color: #111111;
+                }
+    
+            }
+        }
+    }
+
+@at-root
+    .logo {
+        font-size: $title_fontsize;
+        text-align: center;
+        padding-right: 15px;
+        a{
+            color: #ffffff;
+            font-family: $titlefont;
+        }
+    }
+
+
+@at-root
+        .sociallink{
+            display: flex;
+        }
+        @at-root
+            li{
+
+               a {
+                @include flex();
+                   padding: 14px;
+                   color: #ffffff;
+                   font-weight: 600;
+
+                   &:hover{
+                    background-color: #eee;
+                    color: #111111;
+                }
+               } 
+            }   
+}
+
