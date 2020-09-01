@@ -3,3 +3,94 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin padding($unit) {
+    padding: $unit + px;  
+}
+
+@mixin padding_position($position, $unit) {
+    padding-#{$position} : $unit + px;  
+}
+
+@mixin margin_position($position, $unit) {
+    margin-#{$position} : $unit + px;  
+}
+
+@mixin navbar_a(){
+    font-size: 14px;
+    text-decoration: none;
+    font-family: $monofont;
+    color: #fff;
+}
+
+@mixin title_a() {
+    color: #ffffff;
+    font-weight: 600;
+    font-family: $titlefont;
+    text-decoration: none;
+}
+
+@mixin mainContainer() {
+    width: $width;
+    height: 500px;
+      
+}
+
+@mixin bannerText() {
+    background-color: rgba(228, 87, 46,0.4);
+    border-radius: 10px;
+    width: 30%;
+    height: 35%;
+    top : 45%;
+   right: 10%;
+   text-align: center;
+}
+
+@mixin ser_container() {
+    width: $width;
+    height: 700px;
+}
+
+@mixin card(){
+    width: 30%;
+    height: 500px;
+    border: 1px solid grey;
+    border-radius: 10px;
+     
+}
+
+@mixin teamname(){
+    font-size: 20px; 
+    font-weight: 300;
+    text-align: center;
+    padding-top: 100px;
+}
+
+@mixin teambox() {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+@mixin teambox_text(){
+    text-align: center;
+    font-size: 12px;
+    padding-top: 35px;
+    color: #aca6a6;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@mixin team_container() {
+    width: $width;
+    height: $team_container_height;
+}
+
+@mixin footer() {
+    text-align: center;
+    background-color: $mainColor;
+    height: $nav_height;
+    width: $width;
+    
+}

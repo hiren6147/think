@@ -1,85 +1,179 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
 @import "varialble";
 @import "mixin";
 
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing : borderbox;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: borderbox;
 }
 
-.nav_container{
-   li{
-       list-style-type: none;
+/* navbar scss start here   */
 
-   }
-   
+.nav_container {
+  width: $width;
+}
+
+.mainNavbar {
+  @include flex();
+  background-color: $mainColor;
+  width: $width;
+  height: $nav_height;
+
+  @at-root .left_menu {
+    display: flex;
+
+    li {
+      list-style-type: none;
+      a {
+        @include flex();
+        @include padding(14);
+        @include navbar_a();
+
+        &:hover {
+          background-color: #eee;
+          color: #111111;
+        }
+      }
+    }
+  }
+
+  @at-root .logo {
+    font-size: $title_fontsize;
+    @include padding_position(right, 93);
+
     a {
-        text-decoration: none;
-        font-family: $monofont;
+      @include title_a();
+      text-shadow: 2px 2px 2px black;
     }
+  }
+
+  @at-root .sociallink {
+    display: flex;
+  }
+  @at-root li {
+    list-style-type: none;
+    a {
+      @include flex();
+      @include padding(14);
+      @include navbar_a();
+
+      &:hover {
+        background-color: #eee;
+        color: #111111;
+      }
+    }
+  }
 }
 
-.mainNavbar{
-   @include flex();
-    background-color: $mainColor;
-    width: $nav_width;
-    height: $nav_height;
+/*  main container scss start here   */
 
-@at-root
-    .left_menu{
-        display: flex;
+.main {
+  @include mainContainer();
+  position: relative;
 
-        li{
-            
-           
-            a{
-                @include flex();
-                color : #fff;
-                padding: 14px;
+  img {
+    width: 100%;
+    height: 500px;
+  }
 
-                &:hover{
-                    background-color: #eee;
-                    color: #111111;
-                }
-    
-            }
-        }
+  @at-root .banner_text {
+    position: absolute;
+    @include bannerText();
+
+    h3 {
+      font-size: 30px;
+      color: rgb(224, 146, 30);
+      font-family: $monofont;
+      @include padding_position(bottom, 20);
     }
 
-@at-root
-    .logo {
-        font-size: $title_fontsize;
+    .text {
+      color: #eee;
+      letter-spacing: 1px;
+      @include padding_position(left, 10);
+      @include padding_position(right, 10);
+    }
+  }
+}
+
+//   service scss start here
+
+.service {
+  @include ser_container();
+
+  .heading {
+    font-size: 40px;
+    font-family: $titlefont;
+    text-align: center;
+    @include padding_position(top, 20);
+    @include padding_position(bottom, 20);
+  }
+
+  @at-root .service_container {
+    @include flex();
+    @include margin_position(left, 20);
+    @include margin_position(right, 20);
+
+    .card {
+      @include card();
+
+      @at-root .card-img {
+        width: 100%;
+        height: 70%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @at-root .card-text {
         text-align: center;
-        padding-right: 15px;
-        a{
-            color: #ffffff;
-            font-family: $titlefont;
-        }
+        padding-top: 30px;
+      }
     }
-
-
-@at-root
-        .sociallink{
-            display: flex;
-        }
-        @at-root
-            li{
-
-               a {
-                @include flex();
-                   padding: 14px;
-                   color: #ffffff;
-                   font-weight: 600;
-
-                   &:hover{
-                    background-color: #eee;
-                    color: #111111;
-                }
-               } 
-            }   
+  }
 }
 
+/*    Team section  */
+
+.team_section {
+  margin-top: 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .team_container {
+    @include flex();
+    padding : 5% 30px 5% 30px ;
+    position: relative;
+
+    .teaminfo {
+      width: $teaminfo_width;
+      height:$teaminfo_height;
+      background-color: #f3f3f3;
+
+        .team1 {
+       @include teambox();
+        left: 24%;
+        top: 10px;
+      }
+       .team2 {
+        @include teambox();
+        left: 69%;
+        top: 10px;
+      }
+
+      .teamtitle {
+        @include teamname();
+      }
+      .teamtext {
+        @include teambox_text();
+      }
+    }
+  }
+}
+footer {
+  @include footer();
+}
