@@ -139,36 +139,35 @@
 /*    Team section  */
 
 .team_section {
-  margin-top: 30px;
-  width: 100%;
-  height: 100%;
+  @include team_container();
   position: relative;
 
-  .team_container {
+  @at-root .team_container {
     @include flex();
-    padding : 5% 30px 5% 30px ;
+    padding: 5% 30px 5% 30px;
     position: relative;
 
-    .teaminfo {
+    @at-root .teaminfo {
       width: $teaminfo_width;
-      height:$teaminfo_height;
+      height: $teaminfo_height;
       background-color: #f3f3f3;
 
-        .team1 {
-       @include teambox();
-        left: 24%;
+      .team1 {
+        @include teambox();
+        left: 20%;
         top: 10px;
       }
-       .team2 {
+      .team2 {
         @include teambox();
-        left: 69%;
+        left: 72%;
         top: 10px;
       }
 
-      .teamtitle {
+      @at-root .teamtitle {
         @include teamname();
       }
-      .teamtext {
+
+      @at-root .teamtext {
         @include teambox_text();
       }
     }
@@ -176,4 +175,8 @@
 }
 footer {
   @include footer();
+    
+  p{
+      padding-top: 15px;;
+  }
 }
