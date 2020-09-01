@@ -6,7 +6,7 @@
   box-sizing: borderbox;
 }
 
-/* navbar scss start here   */
+/* -----  navbar scss start here  -----  */
 .nav_container {
   width: 100%;
 }
@@ -74,7 +74,7 @@ li a:hover {
   color: #111111;
 }
 
-/*  main container scss start here   */
+/* ------ main container scss start here ------  */
 .main {
   width: 100%;
   height: 500px;
@@ -107,6 +107,7 @@ li a:hover {
   padding-right: 10px;
 }
 
+/*  ******  service scss start here ******  */
 .service {
   width: 100%;
   height: 700px;
@@ -145,7 +146,7 @@ li a:hover {
   padding-top: 30px;
 }
 
-/*    Team section  */
+/*  -----  Team section  -----  */
 .team_section {
   width: 100%;
   height: 100%;
@@ -195,6 +196,7 @@ li a:hover {
   padding-right: 25px;
 }
 
+/* --------- footer start here -------- */
 footer {
   text-align: center;
   background-color: #E4572E;

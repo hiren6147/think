@@ -9,7 +9,7 @@
   box-sizing: borderbox;
 }
 
-/* navbar scss start here   */
+/* -----  navbar scss start here  -----  */
 
 .nav_container {
   width: $width;
@@ -36,8 +36,8 @@
           color: #111111;
         }
       }
-    }
-  }
+    }  // left menu li
+  }  // leftmenu 
 
   @at-root .logo {
     font-size: $title_fontsize;
@@ -47,7 +47,7 @@
       @include title_a();
       text-shadow: 2px 2px 2px black;
     }
-  }
+  }  // logo
 
   @at-root .sociallink {
     display: flex;
@@ -63,11 +63,11 @@
         background-color: #eee;
         color: #111111;
       }
-    }
+    } // social li 
   }
-}
+}  // main navbar container
 
-/*  main container scss start here   */
+/* ------ main container scss start here ------  */
 
 .main {
   @include mainContainer();
@@ -95,10 +95,10 @@
       @include padding_position(left, 10);
       @include padding_position(right, 10);
     }
-  }
-}
+  } // banner_text
+} //  main container
 
-//   service scss start here
+/*  ******  service scss start here ******  */
 
 .service {
   @include ser_container();
@@ -133,10 +133,10 @@
         padding-top: 30px;
       }
     }
-  }
-}
+  } // service container
+} // service section
 
-/*    Team section  */
+/*  -----  Team section  -----  */
 
 .team_section {
   @include team_container();
@@ -170,9 +170,11 @@
       @at-root .teamtext {
         @include teambox_text();
       }
-    }
-  }
-}
+    } // team info
+  } // team container
+} // team section
+
+/* --------- footer start here -------- */
 footer {
   @include footer();
     
